@@ -195,7 +195,7 @@
  .sectionphotos {
   width: auto;
   display: flex;
-  height: 70vh;
+  height: 60vh;
   justify-content: center;
   gap: 0.4rem;
  }
@@ -325,6 +325,7 @@
 .woman-list-products img:hover {
   transform: scale(1.03);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .ul-woman-products {
@@ -343,17 +344,20 @@ span {
 #products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 3rem;
-  justify-content: center;
-  align-items: center;
+  padding: 13rem;
+  margin-bottom: 50px;
+  justify-items: center;
+  align-content: center;
   width: auto;
-  background-color: red;
+  background-color: white;
 }
 
 #products-list > li {
   justify-content: center;
   align-items: center;
+  padding: 25px;
 }
+
 
 #products-list li > img {
   width: 370px;
@@ -361,4 +365,54 @@ span {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  border: 2px solid rgba(250, 227, 198, 0.521);
+  cursor: pointer;
+}
+
+
+.div-product {
+  background-color: white;
+  border-radius: 2px 1px 5px 5px;
+  margin-top: -10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(250, 227, 198, 0.521);
+}
+
+.div-product > h2,
+span {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 2px;
+  padding: 0.5rem;
+}
+
+.div-product > p {
+  color: black;
+  position: absolute;
+  margin: -50px 480px;
+  display: flex;
+}
+
+.div-product > h3 {
+  margin-top: 5px;
+}
+
+.btn-product {
+  padding: 15px;
+}
+
+.btn-product > button {
+  background-color: rgb(255, 241, 222);
+  border-radius: 20px;
+  width: 70px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-product > button:hover {
+  border: 2px solid #f7dbca;
 }

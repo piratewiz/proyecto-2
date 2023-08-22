@@ -15,8 +15,8 @@ const products = [
     name: 'Ck One',
     brand: 'CALVIN KLEIN',
     price: 22.95,
-    stars: 4,
-    reviews: 984,
+    stars: 4.5,
+    reviews: "(984)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/4/6/463.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -26,7 +26,7 @@ const products = [
     brand: 'GIVENCHY',
     price: 39.95,
     stars: 4.5,
-    reviews: 52,
+    reviews: "(52)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/4/3/4367.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -36,7 +36,7 @@ const products = [
     brand: 'LANCOME',
     price: 24.95,
     stars: 5,
-    reviews: 449,
+    reviews: "(449)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/1/7/176.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 
@@ -46,18 +46,18 @@ const products = [
     name: 'SI',
     brand: 'ARMANI',
     price: 37.95,
-    stars: 3,
-    reviews: 124,
+    stars: 3.5,
+    reviews: "(124)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/5/8/582.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
 {
-    name: 'Escada Santorini Sunrise',
+    name: 'Santorini Sunrise',
     brand: 'ESCADA',
     price: 24.95,
-    stars: 4,
-    reviews: 6,
+    stars: 4.5,
+    reviews: "(72)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/7/2/7290.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -67,7 +67,7 @@ const products = [
     brand: 'PACO RABANNE',
     price: 24.95,
     stars: 4.5,
-    reviews: 142,
+    reviews: "(142)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/7/6/763.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -77,7 +77,7 @@ const products = [
     brand: 'JEAN PAUL GAULTIER',
     price: 38.95,
     stars: 5,
-    reviews: 103,
+    reviews: "(93)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/3/8/3870.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -87,7 +87,7 @@ const products = [
     brand: 'VERSACE',
     price: 54.95,
     stars: 4.5,
-    reviews: 34,
+    reviews: "(34)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/3/3/3352.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -97,17 +97,17 @@ const products = [
     brand: 'RALPH LAUREN',
     price: 39.95,
     stars: 5,
-    reviews: 86,
+    reviews: "(86)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/5/7/572.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
 {
-    name: 'Gentleman Reserve Privee',
+    name: 'Reserve Privee',
     brand: 'GIVENCHY',
     price: 38.95,
     stars: 5,
-    reviews: 103,
+    reviews: "(102)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/1/6/1617077.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
@@ -116,8 +116,8 @@ const products = [
     name: ' 212 Vip Black',
     brand: 'CAROLINA HERRERA',
     price: 43.95,
-    stars: 3,
-    reviews: 73,
+    stars: 3.5,
+    reviews: "(70)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/1/9/1921.jpg?quality=80&fit=bounds&height=300&width=300&canvas=300:300'
 },
@@ -127,7 +127,7 @@ const products = [
     brand: 'YVES SAINT LAURENT',
     price: 45.95,
     stars: 5,
-    reviews: 105,
+    reviews: "(34)",
     seller: 'Druni',
     image: 'https://www.druni.es/media/catalog/product/1/1/1118.jpg?quality=80&fit=bounds&height=300&width=300&canvas=300:300'
 },
@@ -219,7 +219,6 @@ const Main = () => {
 
     document.body.appendChild(mainCenter);
 
-
 };
 
 const PerfumesList = () => {
@@ -228,12 +227,15 @@ const PerfumesList = () => {
         const li = document.createElement("li");
         li.innerHTML = `
           <img src="${product.image}" alt="${product.name}">
-          <div>
+          <div class="div-product">
             <h2>${product.name}</h2>
             <span>${product.brand}</span>
-            <p>Precio: $${product.price}</p>
-            <p>Estrellas: ${product.stars}</p>
-            <p>Valoraciones: ${product.reviews}</p>
+            <h3>${product.price} €</h3>
+            <div class="btn-product">
+               <button>30 ML</button>
+               <button>50 ML</button>
+               <button>100 ML</button>
+            <div>
           </div>
         `;
         productsList.appendChild(li);
