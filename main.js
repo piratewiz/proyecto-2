@@ -27,7 +27,7 @@ const products = [
     price: 39.95,
     stars: 4.5,
     reviews: "(52)",
-    seller: 'Druni',
+    seller: 'Douglas',
     image: 'https://www.druni.es/media/catalog/product/4/3/4367.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
@@ -37,7 +37,7 @@ const products = [
     price: 24.95,
     stars: 5,
     reviews: "(449)",
-    seller: 'Druni',
+    seller: 'Primor',
     image: 'https://www.druni.es/media/catalog/product/1/7/176.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 
 },
@@ -48,19 +48,10 @@ const products = [
     price: 37.95,
     stars: 3.5,
     reviews: "(124)",
-    seller: 'Druni',
+    seller: 'Douglas',
     image: 'https://www.druni.es/media/catalog/product/5/8/582.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
-{
-    name: 'Santorini Sunrise',
-    brand: 'ESCADA',
-    price: 24.95,
-    stars: 4.5,
-    reviews: "(72)",
-    seller: 'Druni',
-    image: 'https://www.druni.es/media/catalog/product/7/2/7290.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
 
 {
     name: 'Olympea',
@@ -68,8 +59,8 @@ const products = [
     price: 24.95,
     stars: 4.5,
     reviews: "(142)",
-    seller: 'Druni',
-    image: 'https://www.druni.es/media/catalog/product/7/6/763.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
+    seller: 'Sephora',
+    image: 'https://cdn2.primor.eu/media/catalog/product/cache/8d3aba296f7a18b5251ee30fa5db42b2/3/0/30F00346_1_ad1f.webp'
 },
 
 {
@@ -78,7 +69,7 @@ const products = [
     price: 38.95,
     stars: 5,
     reviews: "(93)",
-    seller: 'Druni',
+    seller: 'Primor',
     image: 'https://www.druni.es/media/catalog/product/3/8/3870.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
@@ -88,7 +79,7 @@ const products = [
     price: 54.95,
     stars: 4.5,
     reviews: "(34)",
-    seller: 'Druni',
+    seller: 'Primor',
     image: 'https://www.druni.es/media/catalog/product/3/3/3352.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
@@ -98,7 +89,7 @@ const products = [
     price: 39.95,
     stars: 5,
     reviews: "(86)",
-    seller: 'Druni',
+    seller: 'Sephora',
     image: 'https://www.druni.es/media/catalog/product/5/7/572.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
 },
 
@@ -118,7 +109,7 @@ const products = [
     price: 43.95,
     stars: 3.5,
     reviews: "(70)",
-    seller: 'Druni',
+    seller: 'Primor',
     image: 'https://www.druni.es/media/catalog/product/1/9/1921.jpg?quality=80&fit=bounds&height=300&width=300&canvas=300:300'
 },
 
@@ -128,7 +119,7 @@ const products = [
     price: 45.95,
     stars: 5,
     reviews: "(34)",
-    seller: 'Druni',
+    seller: 'Primor',
     image: 'https://www.druni.es/media/catalog/product/1/1/1118.jpg?quality=80&fit=bounds&height=300&width=300&canvas=300:300'
 },
 

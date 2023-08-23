@@ -9,6 +9,55 @@
 <body>
 
     <div id="products-list">
+        <div id="filter">
+            <div id="filter-list">
+                <div id="gender">
+                    <button>Woman</button>
+                    <button>Men</button>
+                </div>
+    
+                <div id="price-input">
+                    <label for="Price">- Find by Price -</label>
+                    <input type="number" id="numbers" min="0" max="100">
+                    <button>Search</button> 
+                </div>
+    
+                <div id="brand">
+                    <label for="brand">- Choose a brand -</label>
+                    <select name="select" id="Brand">
+                        <option value="-" selected>-</option>
+                        <option value="CK">Calvin Klein</option>
+                        <option value="Givenchy">Givenchy</option>
+                        <option value="LANCOME">LANCOME</option>
+                        <option value="ARMANI">ARMANI</option>
+                        <option value="PACO RABANNE">PACO RABANNE</option>
+                        <option value="JEAN PAUL GAULTIER">JEAN PAUL GAULTIER</option>
+                        <option value="VERSACE">VERSACE</option>
+                        <option value="RALPH LAUREN">RALPH LAUREN</option>
+                        <option value="CAROLINA HERRERA">CAROLINA HERRERA</option>
+                        <option value="YVES SAINT LAURENT">YVES SAINT LAURENT</option>
+                    </select>
+                </div>
+    
+                <div id="seller-brands">
+                    <label for="seller">- Choose a seller -</label>
+                    <select name="select" id="seller">
+                        <option value="-">-</option>
+                        <option value="Druni">Druni</option>
+                        <option value="Primor">Primor</option>
+                        <option value="Sephora">Sephora</option>
+                        <option value="Douglas">Douglas</option>
+                    </select>
+                </div>
+    
+                <div id="mL">
+                    <h3>How much ML?</h3>
+                    <button>30 mL</button>
+                    <button>50 mL</button>
+                    <button>100 mL</button>
+                </div>
+            </div>
+        </div>
         <ul>
             <li></li>
             <li></li>
@@ -22,6 +71,8 @@
             <li></li>
         </ul>
     </div>
+
+    
 
     <script src="./main.js"></script>
 </body>
