@@ -336,9 +336,57 @@
   border-radius: 10px;
 }
 
-.ul-woman-products a,
+.ul-woman-products a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px;
+}
+
+.men-list-products {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.men-list-products ul {
+  gap: 4rem;
+}
+
+.men-list-products li {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+}
+
+
+.men-list-products img {
+  height: 320px;
+  width: 290px;
+  border-radius: 10px;
+}
+
+.men-list-products img:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.ul-men-products {
+  background-color: #f7dbca71;
+  justify-content: center;
+  align-items: center;
+  width: 1600px;
+  border-radius: 10px;
+}
+
+.ul-men-products a,
 span {
-  margin-top: 7px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px;
 }
 
 #products-list {
@@ -368,6 +416,11 @@ span {
   border-radius: 8px;
   border: 2px solid rgba(250, 227, 198, 0.521);
   cursor: pointer;
+}
+
+#products-list li > img:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
 }
 
 
@@ -546,7 +599,59 @@ span {
 }
 
 #mL > h3 {
-  margin-left: 30px;
+  margin-left: 50px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 5px;
 }
+
+.our-perfumes {
+  height: 25vh;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+}
+
+.our-perfumes ul li > h2 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.our-perfumes ul li > span {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  color: #33272a;
+}
+
+.resumen-perfumes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumen-perfumes > li {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.perfume-icon {
+  margin-top: 20px;
+}
+
+
+footer {
+  width: auto;
+  height: 50vh;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

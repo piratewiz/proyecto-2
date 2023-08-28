@@ -7,6 +7,8 @@ const renderApp = () => {
     SectionPhotos();
     SectionProducts();
     ulListeners();
+    PerfumesResume();
+    FooterElement();
 
 };
 
@@ -275,22 +277,22 @@ const ulListeners = () => {
         <ul class="ul-woman-products">
             <li class="fst-woman-product">
                 <img src="./assets/product1.2.jpg" alt="product">
-                <a href="#">Miss Dior</a>
+                <a href="https://www.druni.es/miss-dior-eau-parfum-mujer">Miss Dior</a>
                 <span>109,90 €</span>
             </li>
             <li class="snd-woman-product">
                 <img src="./assets/product2.2.jpg" alt="product">
-                <a href="#">Narciso Rodríguez</a>
+                <a href="https://www.druni.es/narciso-for-her-narciso-rodriguez-eau-toilette-mujer">Narciso Rodríguez</a>
                 <span>109,90 €</span>
             </li>
             <li class="trd-woman-product">
                 <img src="./assets/product3.2.jpg" alt="product">
-                <a href="#">CHANNEL Coco Noir</a>
+                <a href="https://www.druni.es/coco-noir-chanel-eau-parfum-vaporizador">CHANNEL Coco Noir</a>
                 <span>109,90 €</span>
             </li>
             <li class="fth-woman-product">
                 <img src="https://rougeb2car.vtexassets.com/arquivos/ids/194736/ysl_dmi_hallmark_fragrance-week-22_digital-still-life_packshot-ingredients_black-opium-edp_square_3000x3000px_rgb.jpg?v=638071569066930000" alt="product">
-                <a href="#">Black Opium</a>
+                <a href="https://www.druni.es/black-opium-yves-saint-laurent-eau-parfum-mujer">Black Opium</a>
                 <span>109,90 €</span>
             </li>
         </ul>
@@ -302,27 +304,50 @@ const ulListeners = () => {
         section.innerHTML = `
         <div class="men-list-products">
         <div class="sellers-title">Best Sellers for him</div>
-        <ul>
+        <ul class="ul-men-products">
             <li class="fst-men-product">
-                <p>First</p>
+                <img src="https://www.druni.es/media/catalog/product/4/6/4683.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
+                <a href="https://www.druni.es/eros-versace-eau-parfum-hombre">Versace</a>
                 <span>85,90 €</span>
             </li>
             <li class="snd-men-product">
-                <p>Second</p>
+                <img src="https://www.druni.es/media/catalog/product/4/0/4051.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
+                <a href="https://www.druni.es/born-in-roma-uomo-valentino-eau-de-toilette-para-hombre">Valentino</a>
                 <span>85,90 €</span>
             </li>
             <li class="trd-men-product">
-                <p>Third</p>
+                <img src="https://www.druni.es/media/catalog/product/1/6/1634.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
+                <a href="https://www.druni.es/luna-rosa-carbon-prada-eau-toilette-hombre">Prada</a>
                 <span>85,90 €</span>
             </li>
             <li class="fth-men-product">
-                <p>Fourth</p>
+                <img src="https://www.druni.es/media/catalog/product/1/6/1606025.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
+                <a href="https://www.druni.es/spicebomb-infrared-viktor-rolf-eau-toilette-hombre">VIKTOR & ROLF</a>
                 <span>85,90 €</span>
             </li>
         </ul>
     </div>
         `;
     });
+};
+
+
+const PerfumesResume = () => {
+
+    const resume = document.querySelector(".our-perfumes");
+
+    document.body.appendChild(resume);
+
+    
+};
+
+const FooterElement = () => {
+
+    const footer = document.querySelector("footer");
+
+    document.body.appendChild(footer);
+
+
 };
 
 renderApp();
