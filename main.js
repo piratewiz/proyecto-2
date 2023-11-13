@@ -1,17 +1,3 @@
-const renderApp = () => {
-    Header();
-    Section();
-    Div();
-    Main();
-    PerfumesList();
-    SectionPhotos();
-    SectionProducts();
-    ulListeners();
-    PerfumesResume();
-    FooterElement();
-
-};
-
 const products = [
     {
     name: 'Ck One',
@@ -127,227 +113,155 @@ const products = [
 
 ];
 
-// Creamos el header, compuesto por : logo, menú y un enlace de registro.
-
-const Header = () => {
-    const headerTag = document.createElement("header");
-    const titleHeader = document.createElement("h1");
-    titleHeader.innerText = ("Essential");
-
-    const navMenu = document.createElement("nav");
-    const ulMenu = document.createElement("ul");
-    ulMenu.innerHTML = `
-    <li id="homeNav"><a href="#">Home</a></li>
-    <li id="aboutNav"><a href="#">About</a></li>
-    <li id="fragrancesNav"><a href="#">Fragrances</a></li>
-    <li id="contactNav"><a href="#">Contact</a></li>
-    `;
+let list = document.getElementById('list');
+let filter = document.querySelector('.filter');
+let count = document.getElementById('count');
 
 
-    const divNav = document.createElement("div");
-    divNav.id = "div-signup";
-    const ulNav = document.createElement("ul");
-    ulNav.className ="ulnav";
-    ulNav.innerHTML = `
-    <li id="signup"><a href="#">Sign Up</a></li>
-    <li id="carrocompra"><a href="#"><img width="32" height="32" src="https://img.icons8.com/windows/32/shopping-cart.png" alt="shopping-cart"/></a></li>
-    `;
+let listProducts = [
+    {
+        id: 1,
+        name: 'Name product white-black',
+        price: 69.99,
+        quantity: 0,
+        image: 'img1.jpg',
+        nature: {
+            color: ['white', 'black'],
+            size: ['S', 'M', 'L'],
+            type: 'T-shirt'
+        }
+    },
+    {
+        id: 2,
+        name: 'Name product white-black-grey',
+        price: 49.99,
+        quantiy: 30,
+        image: 'img2.jpg',
+        nature: {
+            color: ['white', 'black', 'grey'],
+            size: ['S', 'M', 'L'],
+            type: 'Polo'
+        }
+    },
+    {
+        id: 3,
+        name: 'Name product black',
+        price: 25.99,
+        quantiy: 30,
+        image: 'img3.jpg',
+        nature: {
+            color: ['black'],
+            size: ['S', 'M', 'L'],
+            type: 'T-shirt'
+        }
+    },
+    {
+        id: 4,
+        name: 'Name product blue-black',
+        price: 25.99,
+        quantiy: 30,
+        image: 'img4.jpg',
+        nature: {
+            color: ['black', 'blue'],
+            size: ['S', 'M', 'L'],
+            type: 'T-shirt'
+        }
+    },
+    {
+        id: 5,
+        name: 'Name product brown',
+        price: 60.99,
+        quantiy: 30,
+        image: 'img5.jpg',
+        nature: {
+            color: ['brown'],
+            size: ['S', 'M', 'L'],
+            type: 'Polo'
+        }
+    },
+    {
+        id: 6,
+        name: 'Name product white-black',
+        price: 39.99,
+        quantiy: 30,
+        image: 'img6.jpg',
+        nature: {
+            color: ['white', 'black'],
+            size: ['S', 'M', 'L'],
+            type: 'Shirt'
+        }
+    },
 
-    divNav.appendChild(ulNav);
-    document.body.appendChild(divNav);
-
-    navMenu.appendChild(ulMenu);
-    document.body.appendChild(navMenu);
-
-
-    headerTag.appendChild(titleHeader);
-
-
-    document.body.appendChild(headerTag);
-};
-
-
-const Section = () => {
-    const sectionMain = document.createElement("section");
-
-    sectionMain.id = "sectiontitle";
-    sectionMain.innerHTML = `
-    <div class="divsection">
-    <h2>Essential for you,</h2>
-    <p>“The beauty of fragrance is that it speaks to your heart, <br> … and hopefully someone else's.” – Elizabeth Taylor.</p>
-    <button class="btnSection">Watch Perfumes</button>
-    </div>
-    `;
-
-
-    document.body.appendChild(sectionMain);
-
-};
-
-const Div = () => {
-    const divPhrase = document.createElement("div");
-
-    divPhrase.id = "divphrase";
-    divPhrase.innerHTML = `
-    <h1 class="h1phrase">Essential Perfumes</h1>
-    <p class="essentialphrase"> ...is not just a perfume; it's an expression of your inner elegance. Let the enchanting notes <br> weave a tale of sophistication around you, leaving everyone around you captivated by your aura.</p>
-    `;
-
-    document.body.appendChild(divPhrase);
-};
-
-const Main = () => {
-    const mainCenter = document.createElement("main");
-
-    mainCenter.id = "mainPhotos";
-    mainCenter.innerHTML = `
-    <div class="centralinfo">
-        <span class="minititle">before anything</span>
-        <h3>DID YOU KNOW...</h3>
-        <p>if you subscribe to our site, you will automatically get a 20% off on your first purchase? Offer includes any product*</p>
-        <button class="btn-blank-register">Register Now</button>
-
-    </div>
-    `;
-
-    document.body.appendChild(mainCenter);
-
-};
-
-const PerfumesList = () => {
-    const productsList = document.querySelector('#products-list');
-    products.forEach(product => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <div class="div-product">
-            <h2>${product.name}</h2>
-            <span>${product.brand}</span>
-            <h3>${product.price} €</h3>
-            <div class="btn-product">
-               <button>30 ML</button>
-               <button>50 ML</button>
-               <button>100 ML</button>
-            <div>
-          </div>
-        `;
-        productsList.appendChild(li);
-      });
-
-      document.body.appendChild(productsList);
-};
+];
 
 
-const SectionPhotos = () => {
-    const sectionPhotos = document.createElement("section");
-    sectionPhotos.className = "sectionphotos";
-    sectionPhotos.innerHTML = `
-    <div class="womanphoto">
-        <button id="womanbtn">Woman</button>
-    </div>
-    <div class="menphoto">
-        <button id="menbtn">Men</button>
-    </div>
-    `;
-
-    document.body.appendChild(sectionPhotos);
-
-     
-};
-
-const SectionProducts = () => {
-    const sectionList = document.createElement("section");
-
-    sectionList.id = "list-products";
-
-    document.body.appendChild(sectionList);
-
-};
-
-const ulListeners = () => {
-    const section = document.querySelector("#list-products");
-
-    const womanBtn = document.querySelector("#womanbtn");
-    const menBtn = document.querySelector("#menbtn");
-
-    womanBtn.addEventListener("click", () => {
-        section.innerHTML = `
-        <div class="woman-list-products">
-        <div class="sellers-title">Best Sellers for her</div>
-        <ul class="ul-woman-products">
-            <li class="fst-woman-product">
-                <img src="./assets/product1.2.jpg" alt="product">
-                <a href="https://www.druni.es/miss-dior-eau-parfum-mujer">Miss Dior</a>
-                <span>109,90 €</span>
-            </li>
-            <li class="snd-woman-product">
-                <img src="./assets/product2.2.jpg" alt="product">
-                <a href="https://www.druni.es/narciso-for-her-narciso-rodriguez-eau-toilette-mujer">Narciso Rodríguez</a>
-                <span>109,90 €</span>
-            </li>
-            <li class="trd-woman-product">
-                <img src="./assets/product3.2.jpg" alt="product">
-                <a href="https://www.druni.es/coco-noir-chanel-eau-parfum-vaporizador">CHANNEL Coco Noir</a>
-                <span>109,90 €</span>
-            </li>
-            <li class="fth-woman-product">
-                <img src="https://rougeb2car.vtexassets.com/arquivos/ids/194736/ysl_dmi_hallmark_fragrance-week-22_digital-still-life_packshot-ingredients_black-opium-edp_square_3000x3000px_rgb.jpg?v=638071569066930000" alt="product">
-                <a href="https://www.druni.es/black-opium-yves-saint-laurent-eau-parfum-mujer">Black Opium</a>
-                <span>109,90 €</span>
-            </li>
-        </ul>
-    </div>
-        `;
-    });
-
-    menBtn.addEventListener("click", () => {
-        section.innerHTML = `
-        <div class="men-list-products">
-        <div class="sellers-title">Best Sellers for him</div>
-        <ul class="ul-men-products">
-            <li class="fst-men-product">
-                <img src="https://www.druni.es/media/catalog/product/4/6/4683.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
-                <a href="https://www.druni.es/eros-versace-eau-parfum-hombre">Versace</a>
-                <span>85,90 €</span>
-            </li>
-            <li class="snd-men-product">
-                <img src="https://www.druni.es/media/catalog/product/4/0/4051.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
-                <a href="https://www.druni.es/born-in-roma-uomo-valentino-eau-de-toilette-para-hombre">Valentino</a>
-                <span>85,90 €</span>
-            </li>
-            <li class="trd-men-product">
-                <img src="https://www.druni.es/media/catalog/product/1/6/1634.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
-                <a href="https://www.druni.es/luna-rosa-carbon-prada-eau-toilette-hombre">Prada</a>
-                <span>85,90 €</span>
-            </li>
-            <li class="fth-men-product">
-                <img src="https://www.druni.es/media/catalog/product/1/6/1606025.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700" alt="product">
-                <a href="https://www.druni.es/spicebomb-infrared-viktor-rolf-eau-toilette-hombre">VIKTOR & ROLF</a>
-                <span>85,90 €</span>
-            </li>
-        </ul>
-    </div>
-        `;
-    });
-};
-
-
-const PerfumesResume = () => {
-
-    const resume = document.querySelector(".our-perfumes");
-
-    document.body.appendChild(resume);
+let productFilter = listProducts;
+    showProduct(productFilter);
+    
+    filter.addEventListener('submit', function(event){
+        event.preventDefault();
+        let valueFilter = event.target.elements;
+        productFilter = listProducts.filter(item => {
+            //  category
+            if(valueFilter.category.value != ''){
+                if(item.nature.type != valueFilter.category.value){
+                    return false;
+                }
+            }
+            //  color
+            if(valueFilter.color.value != ''){
+                if(!item.nature.color.includes(valueFilter.color.value)){
+                    return false;
+                }
+            }
+            //  name
+            if(valueFilter.name.value != ''){
+                if(!item.name.includes(valueFilter.name.value)){
+                    return false;
+                }
+            }
+            //  min price
+            if(valueFilter.minPrice.value != ''){
+                if(item.price < valueFilter.minPrice.value){
+                    return false;
+                }
+            }
+            //   max price
+            if(valueFilter.maxPrice.value != ''){
+                if(item.price > valueFilter.maxPrice.value){
+                    return false;
+                }
+            }
+    
+    
+            return true;
+        })
+        showProduct(productFilter);
+    })
 
     
-};
-
-const FooterElement = () => {
-
-    const footer = document.querySelector("footer");
-
-    document.body.appendChild(footer);
-
-
-};
-
-renderApp();
+    function showProduct(productFilter){
+        count.innerText = productFilter.length;
+        list.innerHTML = '';
+        productFilter.forEach(item => {
+            let newItem = document.createElement('div');
+            newItem.classList.add('item');
+    
+            // crear imagen
+            let newImage = new Image();
+            newImage.src = item.image;
+            newItem.appendChild(newImage);
+            // crear nombre del producto
+            let newTitle = document.createElement('div');
+            newTitle.classList.add('title');
+            newTitle.innerText = item.name;
+            newItem.appendChild(newTitle);
+            // crear el precio
+            let newPrice = document.createElement('div');
+            newPrice.classList.add('price');
+            newPrice.innerText = item.price.toLocaleString() + ' €';
+            newItem.appendChild(newPrice);
+    
+            list.appendChild(newItem);
+        });
+    };
