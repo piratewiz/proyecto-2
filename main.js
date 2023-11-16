@@ -1,118 +1,3 @@
-const products = [
-    {
-    name: 'Ck One',
-    brand: 'CALVIN KLEIN',
-    price: 22.95,
-    stars: 4.5,
-    reviews: "(984)",
-    seller: 'Druni',
-    image: 'https://www.druni.es/media/catalog/product/4/6/463.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-{
-    name: 'Irresistible 80',
-    brand: 'GIVENCHY',
-    price: 39.95,
-    stars: 4.5,
-    reviews: "(52)",
-    seller: 'Douglas',
-    image: 'https://www.druni.es/media/catalog/product/4/3/4367.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-{
-    name: 'La Vie Est Belle',
-    brand: 'LANCOME',
-    price: 24.95,
-    stars: 5,
-    reviews: "(449)",
-    seller: 'Primor',
-    image: 'https://www.druni.es/media/catalog/product/1/7/176.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-
-},
-
-{
-    name: 'SI',
-    brand: 'ARMANI',
-    price: 37.95,
-    stars: 3.5,
-    reviews: "(124)",
-    seller: 'Douglas',
-    image: 'https://www.druni.es/media/catalog/product/5/8/582.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-
-{
-    name: 'Olympea',
-    brand: 'PACO RABANNE',
-    price: 24.95,
-    stars: 4.5,
-    reviews: "(142)",
-    seller: 'Sephora',
-    image: 'https://cdn2.primor.eu/media/catalog/product/cache/8d3aba296f7a18b5251ee30fa5db42b2/3/0/30F00346_1_ad1f.webp'
-},
-
-{
-    name: 'Le Beau',
-    brand: 'JEAN PAUL GAULTIER',
-    price: 38.95,
-    stars: 5,
-    reviews: "(93)",
-    seller: 'Primor',
-    image: 'https://www.druni.es/media/catalog/product/3/8/3870.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-{
-    name: 'Eros Flame',
-    brand: 'VERSACE',
-    price: 54.95,
-    stars: 4.5,
-    reviews: "(34)",
-    seller: 'Primor',
-    image: 'https://www.druni.es/media/catalog/product/3/3/3352.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-{
-    name: 'Polo Blue',
-    brand: 'RALPH LAUREN',
-    price: 39.95,
-    stars: 5,
-    reviews: "(86)",
-    seller: 'Sephora',
-    image: 'https://www.druni.es/media/catalog/product/5/7/572.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-{
-    name: 'Reserve Privee',
-    brand: 'GIVENCHY',
-    price: 38.95,
-    stars: 5,
-    reviews: "(102)",
-    seller: 'Druni',
-    image: 'https://www.druni.es/media/catalog/product/1/6/1617077.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700'
-},
-
-{
-    name: ' 212 Vip Black',
-    brand: 'CAROLINA HERRERA',
-    price: 43.95,
-    stars: 3.5,
-    reviews: "(70)",
-    seller: 'Primor',
-    image: 'https://www.druni.es/media/catalog/product/1/9/1921.jpg?quality=80&fit=bounds&height=300&width=300&canvas=300:300'
-},
-
-{
-    name: 'L hommme',
-    brand: 'YVES SAINT LAURENT',
-    price: 45.95,
-    stars: 5,
-    reviews: "(34)",
-    seller: 'Primor',
-    image: 'https://www.druni.es/media/catalog/product/1/1/1118.jpg?quality=80&fit=bounds&height=300&width=300&canvas=300:300'
-},
-
-];
-
 let list = document.getElementById('list');
 let filter = document.querySelector('.filter');
 let count = document.getElementById('count');
@@ -121,76 +6,201 @@ let count = document.getElementById('count');
 let listProducts = [
     {
         id: 1,
-        name: 'Name product white-black',
-        price: 69.99,
+        seller: 'nike',
+        name: 'Nike Air white-black',
+        price: 110.99,
         quantity: 0,
-        image: 'img1.jpg',
+        image: './assets/fgffgfg.jpg',
         nature: {
             color: ['white', 'black'],
-            size: ['S', 'M', 'L'],
-            type: 'T-shirt'
+            size: ['40', '42', '44'],
+            type: 'Sport'
         }
     },
     {
         id: 2,
-        name: 'Name product white-black-grey',
+        seller: 'nike',
+        name: 'Nike Air white-black-grey',
         price: 49.99,
-        quantiy: 30,
-        image: 'img2.jpg',
+        quantity: 30,
+        image: './assets/grey.jpg',
         nature: {
             color: ['white', 'black', 'grey'],
-            size: ['S', 'M', 'L'],
-            type: 'Polo'
+            size: ['42', '44'],
+            type: 'Lifestyle'
         }
     },
     {
         id: 3,
-        name: 'Name product black',
-        price: 25.99,
-        quantiy: 30,
-        image: 'img3.jpg',
+        seller: 'nike',
+        name: 'Nike Air black',
+        price: 220,
+        quantity: 30,
+        image: './assets/black.jpg',
         nature: {
             color: ['black'],
-            size: ['S', 'M', 'L'],
-            type: 'T-shirt'
+            size: ['40', '44',],
+            type: 'Lifestyle'
         }
     },
     {
         id: 4,
-        name: 'Name product blue-black',
-        price: 25.99,
-        quantiy: 30,
-        image: 'img4.jpg',
+        seller: 'nike',
+        name: 'Nike Air brown-yellow-black',
+        price: 160,
+        quantity: 30,
+        image: './assets/black2.jpg',
         nature: {
-            color: ['black', 'blue'],
-            size: ['S', 'M', 'L'],
-            type: 'T-shirt'
+            color: ['black', 'yellow'],
+            size: ['40', '44',],
+            type: 'Sport'
         }
     },
     {
         id: 5,
-        name: 'Name product brown',
-        price: 60.99,
-        quantiy: 30,
-        image: 'img5.jpg',
+        seller: 'nike',
+        name: 'Nike Air brown',
+        price: 120.99,
+        quantity: 30,
+        image: './assets/brown.jpg',
         nature: {
             color: ['brown'],
-            size: ['S', 'M', 'L'],
-            type: 'Polo'
+            size: ['40', '42', '44'],
+            type: 'Sport'
         }
     },
     {
         id: 6,
-        name: 'Name product white-black',
-        price: 39.99,
-        quantiy: 30,
-        image: 'img6.jpg',
+        seller: 'nike',
+        name: 'Nike Air white-black',
+        price: 119.99,
+        quantity: 30,
+        image: './assets/black.jpg',
         nature: {
             color: ['white', 'black'],
-            size: ['S', 'M', 'L'],
-            type: 'Shirt'
+            size: ['40', '42', '44'],
+            type: 'Lifestyle'
         }
     },
+    {
+        id: 7,
+        seller: 'adidas',
+        name: 'Adidas Pink',
+        price: 49.99,
+        quantity: 30,
+        image: './assets/pink2.jpg',
+        seller: 'Adidas',
+        nature: {
+            color: ['pink'],
+            size: ['40', '42', '44'],
+            type: 'Sport'
+        }
+    },
+    {
+        id: 8,
+        seller: 'adidas',
+        name: 'Adidas Red',
+        price: 69.99,
+        quantity: 30,
+        image: './assets/red.jpg',
+        seller: 'Adidas',
+        nature: {
+            color: ['red'],
+            size: ['40', '42', '44'],
+            type: 'Red'
+        }
+    },
+    {
+        id: 9,
+        seller: 'nike',
+        name: 'Nike Air white-pink',
+        price: 109.99,
+        quantity: 30,
+        image: './assets/pink.jpg',
+        nature: {
+            color: ['pink'],
+            size: ['40', '42', '44'],
+            type: 'Lifestyle'
+        }
+    },
+    {
+        id: 10,
+        seller: 'nike',
+        name: 'Nike Air Yellow',
+        price: 109.99,
+        quantity: 30,
+        image: './assets/yellow.jpg',
+        nature: {
+            color: ['yellow'],
+            size: ['40', '42', '44'],
+            type: 'Lifestyle'
+        }
+    },
+    {
+        id: 11,
+        seller: 'adidas',
+        name: 'Adidas White',
+        price: 90.99,
+        quantity: 30,
+        image: './assets/white3.jpg',
+        nature: {
+            color: ['white'],
+            size: ['40', '42', '44'],
+            type: 'Sport'
+        }
+    },
+    {
+        id: 12,
+        seller: 'adidas',
+        name: 'Adidas Pure Black',
+        price: 159.99,
+        quantity: 30,
+        image: './assets/black3.jpg',
+        nature: {
+            color: ['white', 'black'],
+            size: ['40', '42', '44'],
+            type: 'Sport'
+        }
+    },
+    {
+        id: 13,
+        seller: 'vans',
+        name: 'Vans Black',
+        price: 159.99,
+        quantity: 30,
+        image: './assets/vans2.jpg',
+        nature: {
+            color: ['white', 'black'],
+            size: ['40', '42', '44'],
+            type: 'Lifestyle'
+        }
+    },
+    {
+        id: 13,
+        seller: 'newbalance',
+        name: 'New Balance Grey',
+        price: 159.99,
+        quantity: 30,
+        image: './assets/nb.jpg',
+        nature: {
+            color: ['white', 'grey'],
+            size: ['40', '42', '44'],
+            type: 'Sport'
+        }
+    },
+    {
+        id: 12,
+        seller: 'vans',
+        name: 'Vans Pure Black',
+        price: 159.99,
+        quantity: 30,
+        image: './assets/vans1.jpg',
+        nature: {
+            color: ['yellow', 'black'],
+            size: ['40', '42', '44'],
+            type: 'Lifestyle'
+        }
+    }
 
 ];
 
@@ -202,6 +212,12 @@ let productFilter = listProducts;
         event.preventDefault();
         let valueFilter = event.target.elements;
         productFilter = listProducts.filter(item => {
+            //  seller
+            if(valueFilter.seller.value != ''){
+                if(!item.seller.includes(valueFilter.seller.value)){
+                    return false;
+                }
+            }
             //  category
             if(valueFilter.category.value != ''){
                 if(item.nature.type != valueFilter.category.value){
@@ -265,3 +281,11 @@ let productFilter = listProducts;
             list.appendChild(newItem);
         });
     };
+
+    
+
+    function resetForm(){
+        document.getElementById("form-id").reset();
+      };
+
+

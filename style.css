@@ -14,10 +14,397 @@
   
   body {
     color: var(--secondary);
-    background-color: #faeee7;
+    background-color: ;
     transition: 0.4s;
   }
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-image: url(./assets/whereslugo-6QvRVC-6_Vo-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  #frontline {
+    width: 100%;
+  }
+
+  .frontdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 20px;
+  }
+
+  .frontdiv > h1 {
+    font-size: 80px;
+  }
+
+  .frontdiv > p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  #buy-btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.932);
+    color: aliceblue;
+  }
+
+  #buy-btn:hover {
+    cursor: pointer;
+    background-color: rgba(240, 236, 236, 0.932);
+    color: black;
+  }
+
+  #advertising {
+    background-color: bisque;
+    margin: 30px;
+    width: auto;
+    height: 23vh;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .titles > button {
+    margin-left: -280px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 2px;
+    font-weight: 500;
+    box-shadow: 3px 7px;
+  }
+
+  .titles > button:hover {
+    background-color: rgb(22, 22, 22);
+    transition: 0.4s;
+    box-shadow: 3px 7px rgb(94, 93, 93);
+    color: antiquewhite;
+  }
+
+  #banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 30px;
+    gap: 1em;
+  }
+
+  .banner1 {
+    background-image: url(/assets/banner1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 440px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .banner2 {
+    background-image: url(/assets/banner2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 440px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .lifestyle > a {
+    text-decoration: none;
+    margin-top: 5px;
+    border-style: 2px solid;
+    color: black;
+  }
+
+  .lifestyle > a:hover {
+    border-bottom: 2px solid black;
+  }
+
+  .accessories > a {
+    text-decoration: none;
+    margin-top: 5px;
+    color: black;
+  }
+
+  .accessories > a:hover {
+    border-bottom: 2px solid black;
+  }
+
+  .lifestyle {
+    margin-top: 300px;
+    margin-left: 3em;
+  }
+
+  .accessories {
+    margin-top: 300px;
+    margin-left: 3em;
+  }
+
+  .container{
+    background-color: #E9E0F7;
+    width: 1400px;
+    max-width:  100%;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    display: flex;
+}
+
+.filter{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 1%;
+    row-gap: 20px;
+}
+
+.filter .item{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter .item select,
+.filter .item input,
+.filter .item button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    border-left: 1px solid #ddd;
+    outline: none;
+}
+
+.submit button {
+  border-radius: 6px;
+}
+
+.reset-div button {
+    width: 50%;
+    padding: 5px;
+    border: none;
+    background-color: #AA82ED;
+    border-left: 1px solid #ddd;
+    color: #fff;
+    outline: none;
+    border-radius: 6px;
+}
+.filter .item label{
+    display: block;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.filter .item.submit button{
+    background-color: #AA82ED;
+    color: #fff;
+}
+
+.countResults{
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+}
+
+#list{
+    padding: 20px;
+    display: grid;
+    column-gap: 1%;
+    grid-template-columns: 32.66% 32.66% 32.66%;
+    row-gap: 10px;
+}
+
+#list .item img{
+    width: 90%;
+    height:300px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#list .item{
+    background-color: #fff5;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#list .item .title{
+    font-weight: bold;
+}
+
+#list .item .price{
+    color: black;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+ 
+
+@media  screen and (max-width: 550px) {
+  #banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+    gap: 1em;
+  }
+
+  .banner1, .banner2 {
+    border-radius: 0;
+  }
+   
+   #advertising{
+     height: 35vh;
+   }
+
+   #btnad {
+    margin: 5px;
+   }
+
+   .titles > h2 {
+    margin-right: 225px;
+   }
+
+  .container{
+    background-color: #E9E0F7;
+    width: 100%;
+    max-width:  100%;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter{
+    padding: 20px;
+    display: grid;
+    column-gap: 1%;
+    grid-template-columns: 13% 13%;
+    row-gap: 10px;
+    width: 1700px;
+}
+
+.filter .item{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter .item select,
+.filter .item input,
+.filter .item button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    border-left: 1px solid #ddd;
+    outline: none;
+}
+
+.submit button {
+  border-radius: 6px;
+}
+
+.reset-div button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: #AA82ED;
+    border-left: 1px solid #ddd;
+    color: #fff;
+    outline: none;
+    border-radius: 6px;
+}
+.filter .item label{
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.filter .item.submit button{
+    background-color: #AA82ED;
+    color: #fff;
+}
+
+.countResults{
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+}
+
+#list{
+    padding: 20px;
+    display: grid;
+    column-gap: 1%;
+    grid-template-columns: 50.66% 50.66%;
+    row-gap: 10px;
+}
+
+#list .item img{
+    width: 90%;
+    height:200px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#list .item{
+    background-color: #fff5;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#list .item .title{
+    font-weight: bold;
+}
+
+#list .item .price{
+    color: black;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+}
+ 
 
 
 
